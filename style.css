@@ -1,11 +1,29 @@
 /* The @import rule below imports the Playfair Display and Source Sans Pro fonts into the stylesheet*/
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro:wght@400&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #eae2b7;
   color: #003049;
   font-family: "Source Sans Pro", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 40px;
+  padding: 20px;
+}
+
+.group {
+  display: flex;
+}
+
+.group-column {
+  flex-direction: column;
+}
+
+.item {
+  text-align: left;
+  margin: 10px 20px;
+  flex: 1;
 }
 
 /* Headings */
@@ -42,6 +60,9 @@ p {
   line-height: 1.5;
 }
 
+article div section p {
+  font-size: 14px;
+}
 /* Links */
 a:link {
   color: #d62828;
@@ -51,18 +72,25 @@ a:hover {
   color: #f77f00;
 }
 
+nav {
+  margin: auto;
+}
+
 nav a {
-  padding-left: 20px;
+  padding: 20px;
 }
 
 /* Images */
-img {
+.portfolio {
   width: 100%;
   max-width: 200px;
   height: auto;
 }
 
+
 .image-circle {
+  width: 100%;
+  max-width: 200px;
   border: 2px solid #003049;
   border-radius: 50%;
 }
